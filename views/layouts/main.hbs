@@ -6,15 +6,24 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Arena-f2f</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Face2Face Arena</title>
   </head>
   <body>
-    <h1><a href="/">Arena Face to Face</a></h1>
-    <header>
-      <ul><a href="/warrior/add-form">Rejestracja wojownika</a></ul>
-      <ul><a href="/arena/fight-form">Arena walk</a></ul>
-      <ul><a href="/hall-of-fame">Sala sław</a></ul>
-    </header>
-    {{{body}}}
+    <div class="site-container">
+      <nav class="nav">
+        <h1 class="title"><a href="/" class="title-link logo"><span
+            >Face2Face</span>
+            Arena</a></h1>
+        <ul class="nav-links">
+          <li><a href="/warrior/add-form">Rejestracja wojownika</a></li>
+          <li><a href="/arena/fight-form">Arena walk</a></li>
+          <li><a href="/hall-of-fame">Sala sław</a></li>
+        </ul>
+      </nav>
+      <div class="dynamic-content">
+        {{{body}}}
+      </div>
+    </div>
   </body>
 </html>

@@ -1,24 +1,32 @@
-<h2>Zarejestruj (nie)złomnego wojownika</h2>
-<form action="/warrior" method="post">
+<h2 class="introduction">Zarejestruj (nie)złomnego wojownika</h2>
+<form class="registration-form" action="/warrior" method="post">
   <label>
-    Imię:
-    <input type="text" name="name" minlength="3" maxlength="50" />
+    <span>Imię:</span>
+    <input
+      class="input-name"
+      type="text"
+      name="name"
+      minlength="3"
+      maxlength="50"
+    />
   </label>
-  <label>
-    Siła:
-    <input type="number" name="power" value="1" min="1" max="7" />
-  </label>
-  <label>
-    Obrona:
-    <input type="number" name="defence" value="1" min="1" max="7" />
-  </label>
-  <label>
-    Wytrzymałość:
-    <input type="number" name="stamina" value="1" min="1" max="7" />
-  </label>
-  <label>
-    Zwinność:
-    <input type="number" name="agility" value="1" min="1" max="7" />
-  </label>
+  <div class="perks">
+    <label>
+      <span>Siła:</span>
+      <input type="number" name="power" value="1" min="1" max="7" />
+    </label>
+    <label>
+      <span>Obrona:</span>
+      <input type="number" name="defence" value="1" min="1" max="7" />
+    </label>
+    <label>
+      <span>Wytrzymałość:</span>
+      <input type="number" name="stamina" value="1" min="1" max="7" />
+    </label>
+    <label>
+      <span>Zwinność:</span>
+      <input type="number" name="agility" value="1" min="1" max="7" />
+    </label>
+  </div>
   <button type="submit">Zarejerstruj</button>
 </form>
