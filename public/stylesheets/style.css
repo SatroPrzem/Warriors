@@ -76,6 +76,7 @@ nav .nav-links li a:hover {
 }
 
 button {
+    margin-top: 20px;
     cursor: pointer;
     border: none;
     background: #a80d2a;
@@ -103,7 +104,7 @@ button:hover {
 }
 
 /* Zaczynamy z routingamai*/
-
+/* rejestracja*/
 .introduction {
     padding: 10px;
 }
@@ -122,4 +123,16 @@ button:hover {
 
 .registration-form label input {
     width: 5.5%;
+}
+
+/* Hall of shame*/
+
+table {
+    border: 1px solid black;
+    width: 80%;
+    margin: auto;
+}
+
+td {
+    width: 10%;
 }

@@ -95,7 +95,7 @@ export class WarriorRecord implements WarriorEntity {
 
   static async listTop(topCount: number): Promise<WarriorEntity[]> {
     const [results] = (await pool.execute(
-      "SELECT * FROM `warrior` ORDER BY `wins` DESC LIMIT :topCount",
+      "SELECT * FROM `warriors` ORDER BY `wins` DESC LIMIT :topCount",
       { topCount: topCount }
     )) as WarriorRecordResults;
     return results.map((obj) => new WarriorRecord(obj));

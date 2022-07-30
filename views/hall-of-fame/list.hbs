@@ -1,8 +1,31 @@
 <h2>Sala sław</h2>
 <table>
-  <tr>
-    <td>
-      ...
-    </td>
-  </tr>
+  <thead>
+    <tr>
+      <td>#</td>
+      ń
+      <td>Imię</td>
+      <td>Siła</td>
+      <td>Obrona</td>
+      <td>Wytrzymałość</td>
+      <td>Zwinność</td>
+      <td>Wygrane walki</td>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each warriors}}
+      <tr>
+        <th>
+          {{this.place}}
+        </th>
+        <td>{{this.warrior.name}}</td>
+        <td>{{this.warrior.power}}</td>
+        <td>{{this.warrior.defence}}</td>
+        <td>{{this.warrior.stamina}}</td>
+        <td>{{this.warrior.agility}}</td>
+        <td>{{this.warrior.wins}}</td>
+      </tr>
+
+    {{/each}}
+  </tbody>
 </table>
