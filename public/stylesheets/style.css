@@ -95,6 +95,7 @@ button:hover {
 
 .dynamic-content {
     width: 70%;
+    min-width: 640px;
     margin: 70px auto 0px auto;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -135,4 +136,21 @@ table {
 
 td {
     width: 10%;
+    text-align: center;
+}
+
+.select-warrior {
+    margin-top: 24px;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.warrior {
+}
+
+input, select {
+}
+
+select:after {
 }
