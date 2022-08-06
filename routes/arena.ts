@@ -14,8 +14,8 @@ arenaRouter
     });
   })
   .post("/fight", async (req, res) => {
-    const { warrior1: warrior1Id, warrior2: warrior2Id } = req.body;
     // console.log(req.body);
+    const { warrior1: warrior1Id, warrior2: warrior2Id } = req.body;
     if (warrior1Id === warrior2Id) {
       throw new ValidationError("Musisz wybrać 2 róźnych wojowników");
     }
@@ -29,10 +29,10 @@ arenaRouter
     if (!warrior2) {
       throw new ValidationError("Przepraszamy nie znaleziono wojownika nr. 2");
     }
-    const { log, winner } = fight(warrior2, warrior2);
+    const { log, winner } = fight(warrior1, warrior2);
 
     winner.wins++;
-    console.log("kurwa winner", winner);
+    // console.log("kurwa winner", winner);
     await winner.update();
     res.render("arena/fight", {
       log,

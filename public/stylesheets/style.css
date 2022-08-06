@@ -146,11 +146,7 @@ td {
     justify-content: space-evenly;
 }
 
-.warrior {
-}
-
-input, select {
-}
-
-select:after {
+ol {
+    width: 90%;
+    margin: 0 auto;
 }

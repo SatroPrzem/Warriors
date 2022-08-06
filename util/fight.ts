@@ -28,14 +28,14 @@ export const fight = (
     const attackStrength = attacker.warrior.power;
 
     log.push(
-      `${attacker.warrior.name} zaatakuje ${defender.warrior.name} z siłą ${attackStrength}.`
+      `"${attacker.warrior.name}" spojrzy się na "${defender.warrior.name}" z siłą ${attackStrength}.`
     );
 
     // DP: 5, HP: 5, attackStrength = 7
 
     if (defender.dp + defender.warrior.agility > attackStrength) {
       log.push(
-        `${defender.warrior.name} broni się przed ${attacker.warrior.name}.`
+        `"${defender.warrior.name}" broni się przed "${attacker.warrior.name}".`
       );
 
       defender.dp -= attackStrength;
@@ -44,28 +44,31 @@ export const fight = (
 
       if (defender.dp < 0) {
         log.push(
-          `${attacker.warrior.name} przełamał obronę ${
+          `"${attacker.warrior.name}" przełamał obronę "${
             defender.warrior.name
           } zadając mu ${-defender.dp} obrażeń.`
         );
         defender.hp += defender.dp;
-
+        log.push(`""${defender.warrior.name}"" zostało ${defender.hp}`);
         // HP = 5 - 2 = 3
       }
     } else {
       log.push(
-        `${attacker.warrior.name} zadał ${attackStrength} obrażeń ${defender.warrior.name}.`
+        `"${attacker.warrior.name}" wali za ${attackStrength} obrażeń "${defender.warrior.name}".`
       );
       defender.hp -= attackStrength;
+      log.push(`"${defender.warrior.name}" zostało ${defender.hp} `);
     }
 
     [defender, attacker] = [attacker, defender];
-  } while (defender.hp > 0);
+  } while (attacker.hp > 0);
 
   const winner = defender.warrior;
-  log.push(`${winner.name} zwyciężył!`);
+  log.push(
+    `"${winner.name}" zwyciężył, BRAVO dla tego zawodnika!!!\n CO ZA STYL!`
+  );
 
-  console.log(log);
+  // console.log(log);
   return {
     log,
     winner,
